@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drukst Biotech Pvt. Ltd.</title>
+   
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Lottie Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f4f8fb;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        
+        header:hover {
+            background-color: #00d28e;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(47, 128, 237, 0.9), rgba(0, 210, 142, 0.9)), url('images/your-hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .hero-text {
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: #00d28e;
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #02b87c;
+        }
+
+        .lottie-container {
+            width: 400px;
+            height: 400px;
+            margin-right: 50px;
+        }
+
+        /* Floating Animation */
+        .floating-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .circle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+            50% {
+                transform: translateY(-50px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        .circle:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 20%;
+            left: 10%;
+            animation-duration: 10s;
+        }
+
+        .circle:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            left: 80%;
+            animation-duration: 12s;
+        }
+
+        .circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            top: 80%;
+            left: 30%;
+            animation-duration: 14s;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+            padding: 0 50px;
+        }
+
+        .content-section {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .content-section h2 {
+            margin-bottom: 20px;
+            color: #2C3E50;
+        }
+
+        .content-section p {
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+
+        .mission {
+            background-color: #e8f6f9;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .mission h2 {
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+
+        .mission p {
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-section {
+                margin-bottom: 30px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Drukst Biotech Pvt. Ltd. Logo" class="logo-img">
+            </a>
+            <div class="logo-text">
+                <h1>Drukst Biotech Pvt. Ltd</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="carrer.html">Careers</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Large Image and Lottie Animation -->
+    <section class="hero">
+        <div class="floating-bg">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="hero-content">
+            <div class="lottie-container" id="lottie-animation">
+                <canvas id="canvas" width="300" height="300"></canvas>
+            </div>
+            <div class="hero-text">
+                <h2>Innovating for Better Health</h2>
+                <p>Your trusted partner in pharmaceutical and biotech innovation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="content-section">
+            <h2>Cutting-Edge Research</h2>
+            <p>We invest in the latest research to deliver top-quality pharmaceuticals and innovative biotech solutions.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Our Global Impact</h2>
+            <p>We are committed to improving healthcare on a global scale with a focus on accessibility and innovation.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Join Our Team</h2>
+            <p>Explore exciting career opportunities and be part of our mission to advance healthcare through innovation.</p>
+        </div>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>At Drukst Biotech, we are committed to improving lives through cutting-edge research and innovation in pharmaceuticals and biotechnology.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2010 Drukst Biotech Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lottie Animation Script -->
+    <script type="module">
+        import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+        new DotLottie({
+            autoplay: true,
+            loop: true,
+            canvas: document.getElementById("canvas"),
+            src: "https://lottie.host/d62ec433-60a6-4d5c-89e2-148192395c6c/DNXQJnGwXQ.json", // Replace with your .lottie or .json file URL
+        });
+    </script>
+</body>
+</html>

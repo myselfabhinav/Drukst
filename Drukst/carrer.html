@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Drukst Biotech Pvt. Ltd.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+            background-color: #121212; /* Dark background */
+            animation: fadeIn 0.5s ease; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1A1A1A; /* Darker header */
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #3498db; /* Highlight color */
+        }
+
+        .careers {
+            margin-top: 80px; /* Adjusted margin to move the content down */
+            padding: 50px 20px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .careers h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff; /* Light color for headings */
+            animation: slideIn 0.5s ease; /* Slide-in animation */
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .careers p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #b0b0b0; /* Lighter color for text */
+        }
+
+        .job-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .job-item {
+            background-color: #2C3E50; /* Dark card background */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin: 15px;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0; /* Hidden initially */
+            animation: fadeInUp 0.5s ease forwards; /* Fade-in animation */
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .job-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .job-item h3 {
+            font-size: 1.6rem;
+            color: #ffffff; /* Light color for job titles */
+            margin-bottom: 10px;
+        }
+
+        .job-item p {
+            color: #b0b0b0; /* Lighter color for job descriptions */
+        }
+
+        .apply-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .apply-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #1A1A1A; /* Darker footer */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #3498db; /* Link color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Drukst Biotech Pvt. Ltd. Logo" class="logo-img">
+            </a>
+            <div class="logo-text">
+                <h1>Drukst Biotech Pvt. Ltd</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="carrer.html">Careers</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="careers">
+        <div class="container">
+            <h2>Careers at Drukst Biotech</h2>
+            <p>Join our team of passionate innovators dedicated to making a difference in the biotechnology field. Explore our current job openings and apply to become a part of our mission!</p>
+
+            <div class="job-list">
+                <div class="job-item">
+                    <h3>Medical Representative</h3>
+                    <p>We are seeking a skilled  Medical Representative with a strong background in healthcare sales and passion.</p>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+                <div class="job-item">
+                    <h3>Product Manager</h3>
+                    <p>Seeking a product manager to lead product development and strategy. Your expertise will help us deliver innovative biotech solutions.</p>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+                <div class="job-item">
+                    <h3>Clinical Trials Coordinator</h3>
+                    <p>Looking for a detail-oriented clinical trials coordinator to manage and oversee our clinical research studies. Help us make a difference!</p>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+                <div class="job-item">
+                    <h3>Quality Assurance Specialist</h3>
+                    <p>We need a quality assurance specialist to ensure our products meet the highest standards of quality and safety.</p>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+                <div class="job-item">
+                    <h3>Data Analyst</h3>
+                    <p>Join our team as a data analyst and help us make data-driven decisions. Experience in biotech is a plus!</p>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+                <div class="job-item">
+                    <h3>Regulatory Affairs Associate</h3>
+                    <p>We are hiring a regulatory affairs associate to navigate the complex regulations in the biotech industry.</p>
+                    <button class="apply-button">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2010 Drukst Biotech Pvt. Ltd. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com">Facebook</a>,
+            <a href="https://www.twitter.com">Twitter</a>,
+            <a href="https://www.linkedin.com">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>

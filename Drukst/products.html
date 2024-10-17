@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Drukst Biotech Pvt. Ltd.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f4f8fb;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #2C3E50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        .products {
+            margin-top: 80px;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2C3E50;
+            font-weight: bold;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            text-align: center;
+            width: auto; /* Adjust width based on content */
+            max-width: 100%; /* Ensure card does not exceed the screen size */
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain; /* Display full image without distortion */
+            max-height: 300px; /* Limit height of images */
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            color: #2C3E50;
+            font-weight: 600;
+            margin: 15px 0 10px;
+        }
+
+        .product-info {
+            color: #7f8c8d;
+            padding: 0 15px 15px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .floating-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+            filter: blur(30px);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 5%;
+            animation-duration: 10s;
+        }
+
+        .circle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 75%;
+            animation-duration: 12s;
+        }
+
+        .circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            top: 80%;
+            left: 30%;
+            animation-duration: 14s;
+        }
+
+        @media (max-width: 768px) {
+            .products h2 {
+                font-size: 2rem;
+            }
+
+            .product-name {
+                font-size: 1.3rem;
+            }
+
+            .product-info {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Drukst Biotech Pvt. Ltd. Logo" class="logo-img">
+            </a>
+            <div class="logo-text">
+                <h1>Drukst Biotech Pvt. Ltd</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="carrer.html">Careers</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="floating-bg">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <section class="products">
+        <h2>Our Products</h2>
+              <div class="product-grid">
+            <div class="product-card">
+                <img src="images/02a0d67c-1f02-403d-a07e-5e5dcd7c95c8.jpg" alt="Drunem Plus DT" class="product-img">
+                <div class="product-name">Drunem Plus DT</div>
+                <div class="product-info">This is a brief description of Product 1, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/3.jpg" alt="Product 2" class="product-img">
+                <div class="product-name">Drovin-M</div>
+                <div class="product-info">This is a brief description of Product 2, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/5.jpg" alt="Product 3" class="product-img">
+                <div class="product-name">EDADRU</div>
+                <div class="product-info">This is a brief description of Product 3, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/7b423196-0048-470d-a6e5-c8de5c964219.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">DRUNEM XP</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/8b7d2736-2d7c-49a4-aa9f-3e1dfec903ed.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">Painogel</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/7928e26b-0400-4aa3-8196-fab7d97ba895.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">Drudrol-1gm</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/admyls.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">ADMYL-S</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/ANUCORT-30 box.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">ANUCORT-30</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/c263bcfe-1257-4bdb-9850-ac1e2fc38ad8.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">Capsodru 70</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/CERENU-PH 60 mg (1).jpg" alt="Product 4" class="product-img">
+                <div class="product-name">CERENU-PH 60 mg</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/coenzycp.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">coenzy</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/D-CEFTA-AV (LABEL).jpg" alt="Product 4" class="product-img">
+                <div class="product-name">D-CEFTA-AV</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/dd.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">DYDRODRU IP 10 mg</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/Doxydru-100 mg.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">Doxydru-100 mg</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/dructum.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">dructum-4.5</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/drudol.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">Drudol-125</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/DRUNEM PLUS 1.5 gm (20 Oct) (1).jpg" alt="Product 4" class="product-img">
+                <div class="product-name">DRUNEM PLUS 1.5 gm</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/lmd.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">LMD-F</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/Polydruxpcp.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">Polydru-XP</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/refxi.PNG" alt="Product 4" class="product-img">
+                <div class="product-name">Refxidru-550</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/SUFIM XL CARTON.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">SUFIM-XL</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/SUGEE 50MG.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">SUGEE</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/Sulin-PM box.jpg" alt="Product 4" class="product-img">
+                <div class="product-name">Sulin-PM</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/Teridru (1).jpg" alt="Product 4" class="product-img">
+                <div class="product-name">Teridru</div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+            <div class="product-card">
+                <img src="images/VOGTIN-M (CARTON).jpg" alt="Product 4" class="product-img">
+                <div class="product-name">VOGTIN-M </div>
+                <div class="product-info">This is a brief description of Product 4, detailing its features and benefits.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2010 Drukst Biotech Pvt. Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>

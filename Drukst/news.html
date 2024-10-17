@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Drukst Biotech Pvt. Ltd.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+            background-color: #d3d3d3; /* Set background color to light gray */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .alert-message {
+            background-color: #ffdd57;
+            color: #333;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            position: relative;
+            margin: 80px 0; /* To avoid hiding behind fixed header */
+            border-radius: 5px;
+            z-index: 1; /* Ensure it appears above the animated background */
+        }
+
+        .news {
+            margin-top: 20px; /* Adjusted margin for better spacing */
+            padding: 50px 20px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .news h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2C3E50;
+        }
+
+        .news-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-item h3 {
+            font-size: 1.8rem;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+
+        .news-item p {
+            color: #7f8c8d;
+        }
+
+        .register-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .register-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Background Animation */
+        .background-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: rise 8s ease-in-out infinite;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Individual Bubble Sizes and Animation Durations */
+        .bubble:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            left: 20%;
+            animation-duration: 10s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            left: 40%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            left: 60%;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 120px;
+            height: 120px;
+            left: 80%;
+            animation-duration: 9s;
+            animation-delay: 6s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 180px;
+            height: 180px;
+            left: 30%;
+            animation-duration: 11s;
+            animation-delay: 1s;
+        }
+
+        @media (max-width: 768px) {
+            .news h2 {
+                font-size: 2rem;
+            }
+
+            .news-item h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Drukst Biotech Pvt. Ltd. Logo" class="logo-img">
+            </a>
+            <div class="logo-text">
+                <h1>Drukst Biotech Pvt. Ltd</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="carrer.html">Careers</a></li>
+                <li><a href="carrer.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-animation">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <section class="alert-message">
+        🚨 **Important Update:** Our new product launch is just around the corner! Stay tuned for more details.
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <h2>Latest News & Press Releases</h2>
+            <div class="news-item">
+                <h3>Breakthrough in Cancer Treatment</h3>
+                <p>We are excited to announce a breakthrough in cancer treatment that has shown promising results in clinical trials. Our innovative approach could change the landscape of oncology.</p>
+            </div>
+            <div class="news-item">
+                <h3>Upcoming Product Launch</h3>
+                <p>Stay tuned for the launch of our latest product designed to improve health outcomes. The official release is scheduled for next month!</p>
+            </div>
+            <div class="news-item">
+                <h3>New Partnership with HealthTech Innovations</h3>
+                <p>We have partnered with HealthTech Innovations to enhance our research capabilities and accelerate the development of new treatments.</p>
+            </div>
+            <div class="news-item">
+                <h3>Upcoming Strategy Meeting</h3>
+                <p>Join us for our upcoming strategy meeting where we will discuss new initiatives and future directions for our company.</p>
+            </div>
+            <div class="news-item">
+                <h3>Quarterly Earnings Report</h3>
+                <p>Our quarterly earnings report will be released next week. We are eager to share our growth and achievements with you!</p>
+            </div>
+            <div class="news-item">
+                <h3>Annual Conference Registration Open</h3>
+                <p>Registration for our annual conference is now open! Join us to learn more about our innovative research and network with industry leaders.</p>
+                <button class="register-button">Register Now</button>
+            </div>
+            <div class="news-item">
+                <h3>New Research Publication</h3>
+                <p>We have published a new research paper detailing our latest findings in genetic engineering. Check it out on our website!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2010 Drukst Biotech Pvt. Ltd. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="https://www.facebook.com" style="color: white; margin-left: 5px;">Facebook</a>,
+            <a href="https://www.twitter.com" style="color: white; margin-left: 5px;">Twitter</a>,
+            <a href="https://www.linkedin.com" style="color: white; margin-left: 5px;">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
